@@ -9,6 +9,7 @@ spec:
   targetNamespace: {{ .Release.Namespace }}
   createNamespace: true
   valuesContent: |-
+    fullnameOverride: {{ .Release.Name }}
     grafana:
       enabled: false
     prometheus:
