@@ -42,7 +42,7 @@ spec:
             scrape_interval: 5s
             static_configs:
               - targets: 
-                - "ext-res-alloc-exporter.{{ .Release.Namespace }}:80"
+                - "{{ .Release.Namespace }}-ext-res-alloc-exporter:80"
             metrics_path: /
 {{ end }}
 
